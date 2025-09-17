@@ -1,0 +1,16 @@
+
+.title {  font-family: Georgia, "Times New Roman", Times, serif; font-size: 24pt; font-style: italic}
+.overviewtext {  font-family: Georgia, "Times New Roman", Times, serif; font-size: 18pt; font-style: italic; background-color: #d6d6d6; color: #4444aa}
+.sidenav {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; text-decoration: none; color: #4444aa; background-color: #cccccc}
+a:hover {  text-decoration: underline}
+.footernav { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; text-decoration: none; line-height: 16px; color: #4444aa; background-color: #d6d6d6}
+.footertext {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #4444aa; background-color: #d6d6d6}
+.detailtext {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #4444aa; background-color: #d6d6d6}
+.detailtextred {  color: #ff0000 !important}
+.detailheading {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12pt; font-weight: bold; color: #4444aa; background-color: #d6d6d6}
+.detailtextlink {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; color: #cc66ff; text-decoration: underline; background-color: #d6d6d6}
+.detailsubheading { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold; color: #4444aa; background-color: #d6d6d6}
+body {  background-attachment: fixed; background-image: none; background-color: #FFFFFF}
+.detailtextlist {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #4444aa; list-style-type: square; background-color: #d6d6d6}
+.detailbullet {  font-family: Verdana, Arial, Helvetica, sans-serif; list-style-type: circle; font-size: 8pt; color: #4444aa; background-color: #d6d6d6}
+.detailCriticalProb { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #FF0000; background-color: #d6d6d6 }
