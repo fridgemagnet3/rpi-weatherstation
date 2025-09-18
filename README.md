@@ -26,7 +26,7 @@ The software running on the station consists of a fairly simple [Python script](
 
 `<unix timestamp> <temperature> <wind speed> <rainfall>`
 
-This is sent out as a UDP broadcast packet on port 52003. On my Raspberry Pi, an update is sent out aproximately once a second. The temperature and wind speed readings are taken directly from the sencors. The rainfall figure represents the total amount that has fallen in a 24 hour period (it is reset back to zero at midnight each day) and is the only state data that is held by the station. It's all written to a text file under /var/cache/rainfall.txt each time the gauge triggers. In the event the script is interrupted, the file will be reloaded and used to populate the rainfall figure when it is next started.
+This is sent out as a UDP broadcast packet on port 52003. On my Raspberry Pi, an update is sent out aproximately once a second. The temperature and wind speed readings are taken directly from the sensors. The rainfall figure represents the total amount that has fallen in a 24 hour period (it is reset back to zero at midnight each day) and is the only state data that is held by the station. It's all written to a text file under _/var/cache/rainfall.txt_ each time the gauge triggers. In the event the script is interrupted, the file will be reloaded and used to populate the rainfall figure when it is next started.
 
 The script itself is written for Python 2.7, my Pi runs the (Raspberry Pi flavour) of Debian 8. Both of these are obviously quite old now so expect some work if you intend deploying it on a newer OS and/or version of Python.
 
@@ -71,7 +71,7 @@ The logger software also consists of a [Python script](logger/weather_receiver.p
 <hour value="2">0.2794</hour>
 ```
   
-The script can run on any Linux (or possibly Windows) box, in my case I also happen to run it on another Raspberry Pi. To avoid the likelihood of lifeing the SD cards (or maybe just because I'm paranoid!), the XML file is written to the /dev/shm/ device (which is essentially a RAM disc). The downside to this of course is that this will get lost in the event of a power interruption - you can of course relocate this if you wish.
+The script can run on any Linux (or possibly Windows) box, in my case I also happen to run it on another Raspberry Pi. To avoid the likelihood of lifeing the SD cards (or maybe just because I'm paranoid!), the XML file is written to the _/dev/shm/_ folder (which is essentially a RAM disc). The downside to this of course is that this will get lost in the event of a power interruption - you can of course relocate this if you wish.
 
 The script is also written for Python 2.7, so again some work will probably be required if you want to move it to a newer version.
 
@@ -81,9 +81,9 @@ Within the [web](web/) folder are a colllection of PHP scripts which are designe
 
 <img width="669" height="394" alt="Capture" src="https://github.com/user-attachments/assets/470d24d2-8e8a-4552-92f9-61a4a1d70470" />
 
-The main [index.php](web/index.php) script parses the XML file maintaned by the logger in order to generate the current day's set of readings (including the live updates). It expects the _weather.xml_ file to be in the same folder, in my case (since the logger runs on the same machine), I simply create a symbolic link to the version in /dev/shm/weather.xml. The historical data (including those generated from the child scripts) is obtained by directly querying the MySQL database.
+The main [index.php](web/index.php) script parses the XML file maintaned by the logger in order to generate the current day's set of readings (including the live updates). It expects the _weather.xml_ file to be in the same folder, in my case (since the logger runs on the same machine), I simply create a symbolic link to the version in _/dev/shm/weather.xml_. The historical data (including those generated from the child scripts) is obtained by directly querying the MySQL database.
 
-The static graphs use the [pChart library](https://pchart.sourceforge.net/index.php) however this library is fairly old now (only works up to PHP 5) and the original author is no longer maintaining it. The latest version known to work on PHP 7 and newer is the pChart 2.1 library for PHP 7 (7-Compatible branch) from [github.com/bozhinov](https://github.com/bozhinov). The scripts expect this to be located on the server, one level back in a folder named pchart.  
+The static graphs use the [pChart library](https://pchart.sourceforge.net/index.php) however this library is fairly old now (only works up to PHP 5) and the original author is no longer maintaining it. The latest version known to work on PHP 7 and newer is the pChart 2.1 library for PHP 7 (7-Compatible branch) from [github.com/bozhinov/pChart2.0-for-PHP7](https://github.com/bozhinov/pChart2.0-for-PHP7). The scripts expect this to be located on the server, one level back in a folder named pchart.  
 
 <img width="501" height="312" alt="Screenshot_20250913-141720" src="https://github.com/user-attachments/assets/023c2ca4-063f-4244-b96b-9fb16a688dc2" />
 
