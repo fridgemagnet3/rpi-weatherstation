@@ -11,6 +11,7 @@ ha_temp_discovery = '''
 	"name": "Outside temperature",
 	"state_topic": "weather/temp",
 	"device_class": "temperature",
+	"unit_of_measurement": "°C",
 	"suggested_display_precision": 1,
 	"platform": "sensor",
 	"expire_after": 60
@@ -35,6 +36,7 @@ ha_rain_discovery = '''
 	"unit_of_measurement": "mm",
 	"platform": "sensor",
 	"suggested_display_precision": 1,
+	"state_class": "total_increasing",
 	"expire_after": 60
 }'''
 
