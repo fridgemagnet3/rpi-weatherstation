@@ -14,7 +14,8 @@ ha_temp_discovery = '''
 	"unit_of_measurement": "°C",
 	"suggested_display_precision": 1,
 	"platform": "sensor",
-	"expire_after": 60
+	"expire_after": 60,
+	"unique_id": "rpi_weatherstation_temperature"
 }'''
 
 ha_wind_discovery = '''
@@ -25,7 +26,8 @@ ha_wind_discovery = '''
 	"unit_of_measurement": "mph",
 	"platform": "sensor",
 	"suggested_display_precision": 1,
-	"expire_after": 60
+	"expire_after": 60,
+	"unique_id": "rpi_weatherstation_windspeed"
 }'''
 
 ha_rain_discovery = '''
@@ -37,7 +39,8 @@ ha_rain_discovery = '''
 	"platform": "sensor",
 	"suggested_display_precision": 1,
 	"state_class": "total_increasing",
-	"expire_after": 60
+	"expire_after": 60,
+	"unique_id": "rpi_weatherstation_rainfall"
 }'''
 
 # read latest weather data from rpi4 broadcast packet
