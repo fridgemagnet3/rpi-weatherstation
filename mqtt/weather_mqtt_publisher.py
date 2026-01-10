@@ -10,6 +10,7 @@ ha_temp_discovery = '''
 {
 	"name": "Outside temperature",
 	"state_topic": "weather/temp",
+    "state_class": "measurement",
 	"device_class": "temperature",
 	"unit_of_measurement": "°C",
 	"suggested_display_precision": 1,
@@ -22,6 +23,7 @@ ha_wind_discovery = '''
 {
 	"name": "Wind speed",
 	"state_topic": "weather/wind",
+    "state_class": "measurement",
 	"device_class": "wind_speed",
 	"unit_of_measurement": "mph",
 	"platform": "sensor",
